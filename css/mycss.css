@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+	font-family: 'Raleway', sans-serif;
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;	
+}
+img {
+	max-width:100%;
+	max-height:100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+nav {
+	
+	z-index:1;
+}
+
+.arrows{
+    position: relative;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.arrows:hover {
+    opacity: 1;
+
+    /** default is 1, scale it to 1.5 */
+    transform: scale(1.5, 1.5);
+}
+
+h1{
+	font-size: 5vw;
+}
+h2{
+	font-size: 3vw;
+}
+
+.content {
+  position: relative;
+}
+
+#collapseExample {
+  position: absolute;
+  z-index: 1;
+}
+
+.navbar-toggler{
+    background-color: #73C17B;
+}
+//.navbar-toggler .line{
+
+    background-color: #fff;
+
+}
+
+//.navbar-nav{
+	position: absolute;
+	width:15%;
+	z-index: 1;
+}
+
+.row1
+{
+z-index:1;
+}

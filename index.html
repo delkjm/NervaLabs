@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/mycss.css">
+  <title>Home Page</title>
+</head>
+<body>
+	<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size:10vh;
+  color: white;
+  text-align: center;
+}
+</style>
+
+
+<div class="container-fluid">
+	
+	<div class="row align-items-center"  style="height:100vh">	
+
+		<div class="col-3 px-5  justify-content-center align-self-center">
+			<div>
+            <p>Our state of the art harmless animal monitoring system allows fast and convienient wireless data transferring to your project dashboard. Easily track data and share it to your team</p>
+            </div>
+            <div>
+                <img src="images/800wm.jpg" alt="Shrew">
+            </div>
+             <div class="row py-5 justify-content-center">
+               <button type="button" class="btn btn-success">About Us</button>
+            </div>
+		</div>	
+	
+	<!-- Row 1 Nav -->
+	
+	<div class="col-6 justify-content-end align-self-center">
+        <div class="row justify-content-center">
+            
+            <div class="col-6">
+            <img src="images/Nerva%20Labs.png" alt="Nerva Labs Logo">
+        <form>
+  <div class="form-group">
+    
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+  </div >
+			<div class="row py-5 justify-content-center align-self-center"> 
+  
+				<a href="pages/leader_dashboard.html" class="btn btn-info" role="button">Submit</a>
+				
+				
+			</div>
+</form>
+                </div>
+            </div>
+        
+        </div>
+
+		
+		<div class="col-3  px-5 justify-content-center align-self-center">
+		<div>
+            <p>View public projects around the world with our 
+Nerva Map!</p>
+            </div>
+            <div>
+                <div id="map align-self-center" style="height: 30vh; width: 40vh;">
+</div>
+<script type="text/javascript">
+    var locations = [
+      ['Bondi Beach', -33.890542, 151.274856, 4],
+      ['Coogee Beach', -33.923036, 151.259052, 5],
+      ['Cronulla Beach', -34.028249, 151.157507, 3],
+      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      ['Maroubra Beach', -33.950198, 151.259302, 1]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(-33.92, 151.25),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) { 
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+				</div>
+            
+             <div class="row py-5 justify-content-center align-self-center">
+               <button type="button" class="btn btn-success">Nerva Map</button>
+            </div>
+		</div>
+		</div>
+		
+	</div><!-- container -->
+
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
